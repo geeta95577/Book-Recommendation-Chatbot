@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Recommendation Chatbot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-purple-600 text-white shadow p-5">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">BookBot</h1>
+      <nav>
+        <ul class="flex gap-5">
+          <li><a href="#home" class="hover:underline">Home</a></li>
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#genres" class="hover:underline">Genres</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="text-center py-20 bg-white">
+    <h2 class="text-4xl font-bold mb-4">Smart Book Recommendations with AI</h2>
+    <p class="text-lg mb-6">Chat with our Watson-powered assistant to discover books you’ll love.</p>
+    <a href="#genres" class="bg-purple-600 text-white py-2 px-6 rounded-full hover:bg-purple-700 transition">Get Started</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-semibold mb-4">About the Chatbot</h3>
+      <p class="max-w-2xl mx-auto text-gray-600">
+        Our chatbot uses IBM Watson Assistant to interact with users and recommend books based on their preferred genres. It understands various genres like fiction, horror, romance, and more.
+      </p>
+    </div>
+  </section>
+
+  <!-- Genres Section -->
+  <section id="genres" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-semibold text-center mb-10">Explore Book Genres</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
+        <div class="bg-purple-100 p-6 rounded-xl shadow hover:shadow-md transition">Fiction</div>
+        <div class="bg-purple-100 p-6 rounded-xl shadow hover:shadow-md transition">Horror</div>
+        <div class="bg-purple-100 p-6 rounded-xl shadow hover:shadow-md transition">Romance</div>
+        <div class="bg-purple-100 p-6 rounded-xl shadow hover:shadow-md transition">Fantasy</div>
+        <div class="bg-purple-100 p-6 rounded-xl shadow hover:shadow-md transition">Adventure</div>
+        <div class="bg-purple-100 p-6 rounded-xl shadow hover:shadow-md transition">Sci-Fi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendation Section -->
+  <section class="py-16 bg-gray-50 text-center">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-semibold mb-4">How It Works</h3>
+      <p class="mb-6 text-gray-600">Start a conversation with our assistant, tell your favorite genre, and get book recommendations instantly!</p>
+      <button class="bg-purple-600 text-white py-2 px-8 rounded-full hover:bg-purple-700 transition">Launch Chatbot</button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white text-center">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-semibold mb-4">Contact Us</h3>
+      <p class="mb-6 text-gray-600">Have questions or suggestions? Reach out to us.</p>
+      <form class="max-w-xl mx-auto">
+        <input type="text" placeholder="Your Name" class="w-full mb-4 p-3 border rounded" />
+        <input type="email" placeholder="Your Email" class="w-full mb-4 p-3 border rounded" />
+        <textarea rows="4" placeholder="Message" class="w-full mb-4 p-3 border rounded"></textarea>
+        <button class="bg-purple-600 text-white py-2 px-6 rounded hover:bg-purple-700 transition">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-purple-600 text-white text-center p-4">
+    &copy; 2025 BookBot Project. All rights reserved.
+  </footer>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "06684ec6-2ab3-440e-8362-b9e57d30a613", // The ID of this integration.
+    region: "eu-de", // The region your integration is hosted in.
+    serviceInstanceID: "dfdec464-affa-45b6-a873-90ad8241087b", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
