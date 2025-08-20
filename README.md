@@ -3,7 +3,7 @@ A chatbot built using IBM Watson Assistant that recommends books based on user i
 <br>
 This project is part of my AIML learning journey and demonstrates how conversational AI can help users find relevant books.
 <br>
-<b><u>Features</u><b>
+**Features**
 <br>
 1.Interactive chatbot interface
 <br>
