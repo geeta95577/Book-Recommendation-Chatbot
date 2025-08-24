@@ -20,7 +20,7 @@ Backend:IBM Watson Assistant
 <br>
 1.User open chatbot.
 <br>
-2.Enter preferences(e.g, genre,romance,scientific)
+2.Enter preferences(e.g, genre,romance,scientific,horror)
 <br>
 3.IBM Watson Assistant process input.
 <br>
